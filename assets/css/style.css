@@ -1,0 +1,165 @@
+body{
+    background: #474787;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+
+
+*{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+div.wa{
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    z-index: 4;
+}
+div.wa a:hover{
+    background: #6a6abd !important;
+    transition: 0.8s;
+}
+nav.navbar{
+    background: #474787;    
+}
+.navbar-brand, .nav-link{
+    color: #ffffff;
+    font-weight: 600;
+}
+.nav-link{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+div.navbar-nav .nav-link:hover, .navbar-brand:hover, .social:hover{
+    color: #b1aeac;
+    transition: 0.5s;
+}
+.navbar-brand{
+    font-size: 1.4rem;
+}
+section#home, section#do{
+    width: 100%;
+    height: 100vh;
+}
+section#skills,section#project{
+    width: 100%;
+    height: 100%;
+}
+section#do svg{
+    position: absolute;
+    transform: translateY(-40%);
+    z-index: 1;
+}
+#home .container{
+    margin-top: 10rem;
+}
+h2.intro1{
+    font-size: 2rem;    
+}
+h2.intro2{
+    font-size: 4.5rem;    
+    background: -webkit-linear-gradient(70deg, #ffffff, #5a5a5a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+p.intro3{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+span.fullstack{ 
+    background: -webkit-linear-gradient(50deg, #f07328, #abeb9b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+a.social{
+    color: #ffffff;
+    margin-right: 1.5rem;
+    font-size: 1.6rem;
+
+}
+div.ido{
+    font-size: 9rem;
+    background: #474787;
+    color: #fff2ff;
+}
+p.headline{
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+div.card img{
+    width: 25rem;
+}
+div.card-skill{
+    width: 100%;
+    background: rgba( 217, 217, 217, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2.5px );
+    -webkit-backdrop-filter: blur( 2.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+div.card-skill img{
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+}
+ul.nav-pills li button.active,
+ul.nav-pills li button:hover{
+    background: none !important;
+    border-bottom: 2px solid #b1aeac;
+    border-radius: 0px;
+    transition: 0.5s;
+    color: #b1aeac;
+}
+div.my-service{
+    width: 100%;
+    height: 15.5rem;
+    background: rgba(71, 71, 135);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 2.5px );  
+}
+div.my-service img{
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+div.icon{
+    background: #474787;
+    color: #fff2ff;
+    width: fit-content;
+    font-size: 1.6rem;
+    border-radius: 3rem;
+    position: absolute;
+    top: -1.5rem;
+}
+p.judul{
+    font-size: 1.2rem;
+}
+
+p.detail{
+    position: absolute;
+    top: 14.5%;
+    font-size: 1.2rem;
+    text-align: justify;
+    height: 18rem;
+    background: #474787;    
+    opacity: 0;
+}
+@media (max-width: 767.98px) { 
+    section#do{
+        width: 100%;
+        height: 100%;
+    }      
+}
+@media (min-width: 768px) and (max-width: 1199px){ 
+    section#do{
+        width: 100%;
+        height: 100%;
+    }        
+ }
+
+
+

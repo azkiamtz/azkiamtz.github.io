@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>      
+      *{
+        font-family: 'Poppins', sans-serif;
+      }
+      .navbar-brand{
+        letter-spacing: 0.4rem;
+      }
+      .navbar-nav a{
+        margin-right: 1.5rem;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+      }
+    </style>
+    <title>LogLogan by Mumtaz Azkia</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold line" href="#">LogLogan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" navbar-collapse d-lg-flex justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" onclick="showMenu('materi')" href="javascript:void[0]">Materi</a>
+            <a class="nav-link active" onclick="showMenu('kalku')" href="javascript:void[0]">Kalkulator</a>
+            <a class="nav-link active" onclick="showMenu('tentang')" href="javascript:void[0]">Tentang</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="materi" class="d-block">
+      <div class="container mt-5 py-3 px-5 bg-light shadow-sm" style="line-height: 2rem;">
+        <h6 class="fw-bold">Pengertian Logaritma</h6>        
+        <div class="py-3">
+          <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logaritma adalah sebuah operasi matematika yang merupakan kebalikan (atau invers) dari eksponen atau pemangkatan. Persamaan logaritma yaitu suatu persamaan yang peubahnya merupakan numerus atau bilangan pokok logaritma.</p>
+          <div class="d-flex justify-content-center">
+            <img src="contoh.png" alt="contoh" class="mb-3 img-thumbnail" style="width: 20rem; height: 16rem;">
+          </div>
+          <p class="mb-0 text-center mb-3">Contoh Algoritma</p>
+          <h6 class="fw-bold">Sifat-Sifat Logaritma</h6>
+          <ol>
+            <li>Sifat Logaritma dari Perkalian</li>
+            <li>Sifat Logaritma dari Pembagian</li>
+            <li>Sifat Logaritma Berbanding Terbalik</li>
+            <li>Sifat Logaritma Berlawanan Tanda</li>
+            <li>Sifat Logaritma dari Perpangkatan</li>
+          </ol>
+          <h5 class="mt-3">1. Sifat Logaritma dari Perkalian</h5>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Suatu logaritma yaitu merupakan hasil penjumlahan dari dua logaritma lain yang nilai kedua numerusnya merupakan faktor dari nilai numerus awal.
+          </p>
+          <div class="d-lg-flex text-white align-items-center mb-4 justify-content-center">
+            <h6 class="text-dark text-center mb-3 mb-lg-0 mx-0 mx-lg-3">Rumus :</h6>
+            <div class="bg-dark mx-auto mx-lg-0  border-1 py-3 px-3 rounded" style="width: max-content;">
+              <strong><sup>a</sup> log p . q = <sup>a</sup> log p + <sup>a</sup> log q</strong>
+            </div>
+            <h6 class="text-dark text-center mx-lg-3 mb-3 mb-lg-0 mx-0 mt-3 mt-lg-0">Dengan Syarat :</h6>
+            <div class="bg-dark  border-1 mx-auto mx-lg-0 py-3 px-3 rounded" style="width: max-content;">
+              <strong>a > 0, a &#8800; 1, p > 0, q > 0</strong>
+            </div>
+          </div>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Suatu logaritma a dapat dikalikan dengan logaritma b jika nilai numerus logaritma a sama dengan nilai bilangan pokok logaritma b. Hasil perkaliannya tersebut merupakan logaritma baru dengan nilai bilangan pokok sama dengan logaritma a, dan nilai numerus sama dengan logaritma b.
+          </p>
+          <div class="d-lg-flex text-white align-items-center mb-4 justify-content-center">
+            <h6 class="text-dark text-center mb-3 mb-lg-0 mx-0 mx-lg-3">Rumus :</h6>
+            <div class="mx-auto mx-lg-0 bg-dark  border-1 py-3 px-3 rounded" style="width: max-content;">
+              <strong><sup>a</sup> log b &#183; <sup>b</sup> log c = <sup>a</sup> log c</strong>
+            </div>
+            <h6 class="text-dark text-center mb-3 mb-lg-0 mx-0 mx-lg-3 mt-3 mt-lg-0">Dengan Syarat :</h6>
+            <div class="mx-auto mx-lg-0 bg-dark  border-1 py-3 px-3 rounded" style="width: max-content;">
+              <strong>a > 0, a &#8800; 1</strong>
+            </div>
+          </div>
+          <!-- 2 -->
+          <h5 class="mt-3">2. Sifat Logaritma dari Pembagian</h5>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Suatu logaritma yaitu merupakan hasil pengurangan dari dua logaritma lain yang nilai kedua numerusnya adalah pecahan atau pembagian dari nilai numerus logaritma awal.
+          </p>          
+          <div class="d-lg-flex text-white align-items-center justify-content-center">
+            <h6 class="text-dark text-center mb-3 mb-lg-0 mx-0 mx-lg-3">Rumus :</h6>
+            <div class="mx-auto mx-lg-0 bg-dark  border-1 py-3 px-3 rounded" style="width: max-content;">
+              <strong><sup>a</sup> log p / q = <sup>a</sup> log p - <sup>a</sup> log q</strong>
+            </div>
+            <h6 class="text-dark text-center mb-3 mb-lg-0 mx-0 mx-lg-3 mt-3 mt-lg-0">Dengan Syarat :</h6>
+            <div class="mx-auto mx-lg-0 bg-dark  border-1 py-3 px-3 rounded" style="width: max-content;">
+              <strong>a > 0,a &#8800; 1, p > 0, q > 0</strong>
+            </div>
+          </div>
+          <!-- 3 -->
+          <h5 class="mt-3">3. Sifat Logaritma Berbanding Terbalik</h5>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Suatu logaritma berbanding terbalik dengan logaritma lain yang memiliki nilai bilangan pokok dan numerusnya saling bertukaran.
+          </p>          
+          <div class="d-lg-flex text-white align-items-center justify-content-center">
+            <h6 class="text-dark text-center mb-3 mb-lg-0 mx-0 mx-lg-3">Rumus :</h6>
+            <div class="mx-auto mx-lg-0 bg-dark  border-1 py-3 px-3 rounded" style="width: max-content;">
+              <strong><sup>a</sup> log b = 1 / <sup>b</sup> log a</strong>
+            </div>
+            <h6 class="text-dark text-center mb-3 mb-lg-0 mx-0 mx-lg-3 mt-3 mt-lg-0">Dengan Syarat :</h6>
+            <div class="mx-auto mx-lg-0 bg-dark  border-1 py-3 px-3 rounded" style="width: max-content;">
+              <strong>a > 0,a &#8800; 1</strong>
+            </div>
+          </div>
+          <!-- 4 -->
+          <h5 class="mt-3">4. Sifat Logaritma Berlawanan Tanda</h5>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Suatu logaritma berlawanan tanda dengan logaritma yang memiliki numerusnya yaitu merupakan pecahan terbalik dari nilai numerus logaritma awal.
+          </p>          
+          <div class="d-lg-flex text-white align-items-center justify-content-center">
+            <h6 class="text-dark text-center mb-3 mb-lg-0 mx-0 mx-lg-3">Rumus :</h6>
+            <div class="mx-auto mx-lg-0 bg-dark  border-1 py-3 px-3 rounded" style="width: max-content;">
+              <strong><sup>a</sup> log p / q = – <sup>a</sup> log p / q</strong>
+            </div>
+            <h6 class="text-dark text-center mb-3 mb-lg-0 mx-0 mx-lg-3 mt-3 mt-lg-0">Dengan Syarat :</h6>
+            <div class="mx-auto mx-lg-0 bg-dark  border-1 py-3 px-3 rounded" style="width: max-content;">
+              <strong>a > 0,a &#8800; 1, p > 0, q > 0</strong>              
+            </div>
+          </div>
+          <!-- 5 -->
+          <h5 class="mt-3">5. Sifat Logaritma Perpangkatan</h5>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Suatu logaritma yaitu dengan nilai numerusnya merupakan suatu eksponen (pangkat) dan dapat dijadikan logaritma baru dengan mengeluarkan pangkatnya menjadi bilangan pengali.
+          </p>          
+          <div class="d-lg-flex text-white align-items-center justify-content-center">
+            <h6 class="text-dark text-center mb-3 mb-lg-0 mx-0 mx-lg-3">Rumus :</h6>
+            <div class="mx-auto mx-lg-0 bg-dark  border-1 py-3 px-3 rounded" style="width: max-content;">
+              <strong><sup>a</sup> log b <sup>p</sup> = p &#183; <sup>a</sup> log b</strong>
+            </div>
+            <h6 class="text-dark text-center mb-3 mb-lg-0 mx-0 mx-lg-3 mt-3 mt-lg-0">Dengan Syarat :</h6>
+            <div class="mx-auto mx-lg-0 bg-dark  border-1 py-3 px-3 rounded" style="width: max-content;">
+              <strong>a > 0,a &#8800; 1, p > 0, q > 0</strong>              
+            </div>
+          </div>
+        </div> 
+      </div>
+    </section>
+    
+    <section id="kalku" class="d-none">
+      <div class="container mt-5 py-3 px-5 bg-light shadow-sm" style="line-height: 2rem;">
+        <h6 class="fw-bold">Kalkulator Logaritma</h6>        
+        <div class="py-3">
+          <div class="bg-dark p-3 rounded mb-3 text-white" style="width: max-content;">
+            <h5 class="mb-0">Log<sub id="basis-txt">2</sub>(<span id="number">0</span>) = <span id="hasil">0</span></h5>
+          </div>
+          <div class="d-flex align-items-end">
+          <div class="form-group">
+            <label for="" class="form-label">Masukan Angka</label>
+            <p id="p_angka" class="text-danger mb-0" style="display: none;">angka harus diisi</p>
+              <input type="number" id="angka" onkeyup="return setAngka()" class="form-control" style="width: max-content; margin-right: 1rem;" placeholder="Angka">
+            </div>
+          <div class="form-group" style="margin-right: 1rem;">
+            <label for="" class="form-label">Masukan Basis</label>
+              <select class="form-select" onchange="setBasis()" id="basis">
+                <option value="2">Basis 2</option>
+                <option value="10">Basis 10</option>
+              </select>
+            </div>
+            <button class="btn btn-outline-success" onclick="hitungLog()">Hitung Log</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="tentang" class="d-none">
+      <div class="container mt-5 py-3 px-5 bg-light shadow-sm" style="line-height: 2rem;">
+        <h5 class="fw-bold">Tentang</h5>        
+        <div class="py-3" style="font-size: 1rem;">
+            Website LogLogan dibuat untuk memenuhi tugas besar kalkulus di Universitas Dian Nusantara.
+            <div class="table-responsive">
+              <table class="table-striped table">
+                <tr>
+                  <td>Nama</td>
+                  <td>:</td>
+                  <td>Mumtaz Azkia Hakim</td>
+                </tr>
+                <tr>
+                  <td>NIM</td>
+                  <td>:</td>
+                  <td>411221125</td>
+                </tr>
+                <tr>
+                  <td>Mata Kuliah</td>
+                  <td>:</td>
+                  <td>Kalkulus</td>
+                </tr>
+                <tr>
+                  <td>Prodi</td>
+                  <td>:</td>
+                  <td>Teknik Informatika (Cibubur)</td>
+                </tr>
+                <tr>
+                  <td>Dosen</td>
+                  <td>:</td>
+                  <td>Masnia, M.Pd</td>
+                </tr>
+              </table>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark mt-5 text-white">
+      <div class="container py-5">
+        <div class="row d-flex align-items-center">
+          <div class="col-12 col-lg-4 text-center">
+            <h3 class="mb-0">LogLogan</h3>
+            <p class="mb-0">by Mumtaz Azkia</p>
+            <p class="mb-0">Kalkulus 2022</p>
+          </div>
+          <div class="col-12 col-lg-8 text-center">
+            <h5>Shortcut Menu</h5>
+            <ul style="list-style: none;">
+              <li><a onclick="showMenu('materi')" href="javascript:void[0]">Materi</a></li>
+              <li><a onclick="showMenu('kalku')" href="javascript:void[0]">Kalkulator</a></li>
+              <li><a onclick="showMenu('tentang')" href="javascript:void[0]">Tentang</a></li>
+            </ul>
+          </div>  
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function showMenu(params) {   
+          document.getElementById("materi").classList.add("d-none")
+          document.getElementById("kalku").classList.add("d-none")
+          document.getElementById("tentang").classList.add("d-none")
+          document.getElementById("number").innerText = 0
+          document.getElementById("hasil").innerHTML = 0
+          document.getElementById("angka").value = ""
+          if (params == "materi") {
+            materi.classList.remove("d-none")
+          }else if (params == "kalku") {
+            kalku.classList.remove("d-none")
+          }else{
+            tentang.classList.remove("d-none")
+          }
+        }
+
+        function setBasis() {
+          document.getElementById("basis-txt").innerText = ""
+          document.getElementById("basis-txt").innerText = document.getElementById("basis").value
+        }
+
+        function setAngka() {
+          document.getElementById("number").innerText = ""
+          document.getElementById("number").innerText = document.getElementById("angka").value          
+        }       
+        
+        function hitungLog() {
+          materi.style.display = "none"
+          if(document.getElementById("angka").value == ""){
+            p_angka.style.display = "block"
+          }else{
+            const angka = document.getElementById("angka").value
+            const basis = document.getElementById("basis").value
+            var hasil = 0;
+            if (basis == "2") {
+              hasil = Math.log2(angka)            
+            }else if(basis == "10"){
+              hasil = Math.log10(angka)            
+            }
+            document.getElementById("angka").value = ""
+            document.getElementById("hasil").innerText = hasil
+
+
+          }
+        }
+        
+      </script>
+  </body>
+</html>

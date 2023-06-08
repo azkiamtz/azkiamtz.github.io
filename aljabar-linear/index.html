@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>      
+      *{
+        font-family: 'Poppins', sans-serif;
+      }      
+      .navbar-nav a{
+        margin-right: 1.5rem;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .form-control{
+        border: 1px solid #000000 !important;
+      }
+    </style>
+    <title>Matrikzz by Mumtaz Azkia</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold line" href="#">Matrikzz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" navbar-collapse d-lg-flex justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" onclick="showMenu('materi')" href="javascript:void[0]">Materi</a>
+            <a class="nav-link active" onclick="showMenu('kalku')" href="javascript:void[0]">Kalkulator</a>
+            <a class="nav-link active" onclick="showMenu('tentang')" href="javascript:void[0]">Tentang</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="materi" class="d-block">
+      <div class="container mt-5 py-3 px-5 bg-light shadow-sm" style="line-height: 2rem;">
+        <h6 class="fw-bold">Pengertian Matriks</h6>        
+        <div class="py-3">
+          <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matriks adalah suatu susunan bilangan real atau bilangan kompleks (atau elemen-elemen) yang disusun dalam baris dan kolom sehingga membentuk jajaran persegi panjang.</p>
+          <h6 class="fw-bold">Cara Menyatakan Matriks</h6>
+          <p class="text-justify mb-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notasi yang digunakan untuk menyatakan matriks bisa dengan kurung kecil <strong>()</strong> , kurung siku <strong>[]</strong> , atau dengan garis tegak dobel <strong>||</strong> .</p>
+          <div class="d-md-flex align-items-center mb-4">
+            <p class="mb-0" style="margin-right: 8px;">Contoh : </p>
+            <img src="contoh.png" alt="contoh" class=" img-thumbnail" style="width: 12rem;">
+          </div>
+          <h6 class="fw-bold">Ordo/Ukuran/Order dari suatu matriks</h6>
+          <p class="text-justify mb-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ordo/ukuran dari suatu matriks ditentukan oleh banyaknya baris dan kolom yang dimiliki oleh matriks tersebut. Contoh: Matriks A pada contoh di atas meniliki dua buah baris dan dua buah kolom, sehingga kita katakana matriks A berordo 2 x 2.</p>          
+          <h6 class="fw-bold">Operasi Matriks</h6>
+          <ol>
+            <li>Operasi Penjumlahan Matriks</li>
+            <li>Operasi Pengurangan Matriks</li>
+            <li>Operasi Perkalian Matriks</li>
+          </ol>
+          <!-- 1 -->
+          <h5 class="mt-3">1. Operasi Penjumlahan Matriks</h5>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Dua buah matriks dapat dijumlahkan apabila keduanya memiliki ordo yang sama. Hasil operasi penjumlahannya adalah matriks baru yang memiliki ordo sama dengan matriks semula, dengan elemen-elemennya terdiri dari hasil penjumlahan elemen-elemen pada matriks.
+          </p>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Secara matematis, operasi penjumlahan matriks dapat diasumsikan sebagai berikut:
+          </p>   
+          <div class="d-flex justify-content-center">
+            <img src="penjumlahan.jpg" alt="contoh" class=" img-thumbnail" style="width: 23rem;">
+          </div>
+          <!-- 2 -->
+          <h5 class="mt-3">2. Operasi Pengurangan Matriks</h5>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Penguragan matriks memiliki konsep yang sama dengan penjumlahan. Dua buah matriks dapat dikurangkan apabila keduanya memiliki ordo yang sama.
+          </p>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Hasil operasi pengurangannya adalah matriks baru yang memiliki ordo sama dengan matriks semula, dengan elemen-elemennya terdiri dari hasil pengurangan dengan elemen-elemen pada matriks.
+          </p>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Secara matematis, operasi pengurangan matriks dapat diasumsikan sebagai berikut:
+          </p>   
+          <div class="d-flex justify-content-center">
+            <img src="pengurangan.jpg" alt="contoh" class=" img-thumbnail" style="width: 23rem;">
+          </div>
+          <!-- 3 -->
+          <h5 class="mt-3">3. Operasi Perkalian Matriks</h5>
+          <li class="fw-bold">Perkalian Matriks dengan Skalar</li>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Perkalian matriks dengan skalar dilakukan dengan cara mengalikan setiap elemen matriks dengan skalar tersebut, dan menghasilkan matriks dengan ordo seperti matriks yang dikalikan.</p>          
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Secara matematis, operasi perkalian matriks dengan skalar dapat diasumsikan sebagai berikut:
+          </p>   
+          <div class="d-flex justify-content-center">
+            <img src="skalar.jpg" alt="contoh" class=" img-thumbnail" style="width: 23rem;">
+          </div>
+          <li class="fw-bold">Perkalian Matriks dengan Matriks</li>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Dilansir dari Encyclopedia Britannica, perkalian matriks dengan matriks yang kita asumsikan sebagai matriks A dan matriks B memiliki syarat, yaitu kolom matriks A harus sama dengan baris matriks B. Sedangkan ordo dari hasil perkalian matriks tersebut adalah banyaknya baris matriks A dikali dengan banyaknya kolom matriks B.</p>          
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Secara matematis, bentuk ordo pada perkalian matriks dengan matriks adalah :
+          </p>   
+          <div class="d-flex justify-content-center">
+            <img src="matriks.jpg" alt="contoh" class=" img-thumbnail" style="width: 23rem;">
+          </div>
+          <p class="px-0 px-lg-5" style="text-align: justify;">
+            Sedang kan Operasi perkalian matriks dengan matriks dapat diasumsikan sebagai berikut :
+          </p>   
+          <div class="d-flex justify-content-center">
+            <img src="perkalian.jpg" alt="contoh" class=" img-thumbnail" style="width: 23rem;">
+          </div>
+        </div> 
+      </div>
+    </section>
+    
+    <section id="kalku" class="d-none">
+      <div class="container mt-5 py-3 px-5 bg-light shadow-sm" style="line-height: 2rem;">
+        <div class="alert-wrap">          
+        </div>
+        <h6 class="fw-bold">Kalkulator Operasi Matriks</h6>   
+        <div class="result bg-white rounded p-3 d-none" style="width: 100%; border: 1px solid #000000;">
+          <div class="text-center fw-semibold"><h5 class="mb-0">Hasil : </h5></div>
+            <div class="row mt-4 d-flex justify-content-center">
+              <div class="hasil-matriks col-12 row">
+                               
+              </div>
+            </div>
+        </div>     
+        <div class="py-3">          
+          <div class="row">
+            <div class="col-12 mt-3">
+              <div class="form-group">
+                <label class="form-label">Jenis Operasi</label>
+                <select id="operasi" class="form-select">
+                  <option value="" selected>-- Pilih Jenis Operasi --</option>
+                  <option value="penjumlahan">Penjumlahan Matriks</option>
+                  <option value="pengurangan">Pengurangan Matriks</option>
+                  <option value="skalar">Perkalian Matriks dengan Skalar</option>
+                  <option value="perkalian">Perkalian Matriks dengan Matriks</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 mt-3">
+              <div class="form-group">
+                <label class="form-label">Ordo</label>
+                <select id="ordo" class="form-select">
+                  <option value="" selected>-- Pilih Ordo --</option>
+                  <option value="2">Ordo 2x2</option>
+                  <option value="3">Ordo 3x3</option>
+                </select>
+              </div>
+            </div>
+            <!-- Penjumalahan 2x2 -->
+            <div id="input-operasi-1" class="col-12 mt-3 penjumlahan_2x2 d-none">
+              <label for="" class="form-label">Penjumalahan Matriks 2x2</label>
+                <div class="row d-lg-flex justify-content-center align-items-center mt-1">
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5"><input type="number" name="2x2_1_1_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-5"><input type="number" name="2x2_1_2_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_1_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_2_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-2 text-center"><h3 class="mb-0">+</h3></div>
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5"><input type="number" name="2x2_1_1_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-5"><input type="number" name="2x2_1_2_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_1_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_2_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                </div>                
+            </div>
+            <!-- Penjumalahan 3x3 -->
+            <div id="input-operasi-2" class="col-12 mt-3 penjumlahan_3x3 d-none">
+              <label for="" class="form-label">Penjumalahan Matriks 3x3</label>
+                <div class="row d-lg-flex justify-content-center align-items-center mt-1">
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3"><input type="text" name="3x3_1_1_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_2_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_3_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_1_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_2_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_3_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_1_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_2_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_3_a_penjumlahan" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-2 text-center"><h3 class="mb-0">+</h3></div>
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3"><input type="text" name="3x3_1_1_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_2_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_3_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_1_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_2_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_3_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_1_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_2_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_3_b_penjumlahan" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                </div>                
+            </div>
+            <!-- Pengurangan 2x2 -->
+            <div id="input-operasi-3" class="col-12 mt-3 pengurangan_2x2 d-none">
+              <label for="" class="form-label">Pengurangan Matriks 2x2</label>
+                <div class="row d-lg-flex justify-content-center align-items-center mt-1">
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5"><input type="number" name="2x2_1_1_a_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-5"><input type="number" name="2x2_1_2_a_pengurangan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_1_a_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_2_a_pengurangan" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-2 text-center"><h3 class="mb-0">-</h3></div>
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5"><input type="number" name="2x2_1_1_b_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-5"><input type="number" name="2x2_1_2_b_pengurangan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_1_b_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_2_b_pengurangan" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                </div>                
+            </div>
+            <!-- Pengurangan 3x3 -->
+            <div id="input-operasi-4" class="col-12 mt-3 pengurangan_3x3 d-none">
+              <label for="" class="form-label">Pengurangan Matriks 3x3</label>
+                <div class="row d-lg-flex justify-content-center align-items-center mt-1">
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3"><input type="text" name="3x3_1_1_a_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_2_a_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_3_a_pengurangan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_1_a_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_2_a_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_3_a_pengurangan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_1_a_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_2_a_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_3_a_pengurangan" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-2 text-center"><h3 class="mb-0">-</h3></div>
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3"><input type="text" name="3x3_1_1_b_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_2_b_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_3_b_pengurangan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_1_b_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_2_b_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_3_b_pengurangan" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_1_b_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_2_b_pengurangan" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_3_b_pengurangan" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                </div>                
+            </div>
+            <!-- Skalar 2x2 -->
+            <div id="input-operasi-5" class="col-12 mt-3 skalar_2x2 d-none">
+              <label for="" class="form-label">Perkalian Matriks 2x2 dengan Skalar</label>
+                <div class="row d-lg-flex justify-content-center align-items-center mt-1">
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5"><input type="number" name="2x2_skalar" class="form-control" placeholder=""></div>                  
+                    </div>                    
+                  </div>
+                  <div class="col-12 col-lg-2 text-center"><h3 class="mb-0">x</h3></div>
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5"><input type="number" name="2x2_1_1_skalar" class="form-control" placeholder=""></div>                  
+                      <div class="col-5"><input type="number" name="2x2_1_2_skalar" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_1_skalar" class="form-control" placeholder=""></div>                  
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_2_skalar" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                </div>                
+            </div>
+            <!-- Skalar 3x3 -->
+            <div id="input-operasi-6" class="col-12 mt-3 skalar_3x3 d-none">
+              <label for="" class="form-label">Perkalian Matriks 3x3 dengan Skalar</label>
+                <div class="row d-lg-flex justify-content-center align-items-center mt-1">
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5"><input type="number" name="3x3_skalar" class="form-control" placeholder=""></div>                  
+                    </div>                    
+                  </div>
+                  <div class="col-12 col-lg-2 text-center"><h3 class="mb-0">x</h3></div>
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3"><input type="text" name="3x3_1_1_skalar" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_2_skalar" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_3_skalar" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_1_skalar" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_2_skalar" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_3_skalar" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_1_skalar" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_2_skalar" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_3_skalar" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                </div>                
+            </div>
+            <!-- Perkalian 2x2 -->
+            <div id="input-operasi-7" class="col-12 mt-3 perkalian_2x2 d-none">
+              <label for="" class="form-label">Perkalian Matriks dengan Matriks Ordo 2x2</label>
+                <div class="row d-lg-flex justify-content-center align-items-center mt-1">
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5"><input type="number" name="2x2_1_1_a_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-5"><input type="number" name="2x2_1_2_a_perkalian" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_1_a_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_2_a_perkalian" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-2 text-center"><h3 class="mb-0">x</h3></div>
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5"><input type="number" name="2x2_1_1_b_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-5"><input type="number" name="2x2_1_2_b_perkalian" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_1_b_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-5 mt-3"><input type="number" name="2x2_2_2_b_perkalian" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                </div>                
+            </div>
+            <!-- Perkalian 3x3 -->
+            <div id="input-operasi-8" class="col-12 mt-3 perkalian_3x3 d-none">
+              <label for="" class="form-label">Perkalian Matriks dengan Matriks Ordo 3x3</label>
+                <div class="row d-lg-flex justify-content-center align-items-center mt-1">
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3"><input type="text" name="3x3_1_1_a_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_2_a_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_3_a_perkalian" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_1_a_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_2_a_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_3_a_perkalian" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_1_a_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_2_a_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_3_a_perkalian" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-2 text-center"><h3 class="mb-0">x</h3></div>
+                  <div class="col-12 col-lg-3">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3"><input type="text" name="3x3_1_1_b_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_2_b_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3"><input type="text" name="3x3_1_3_b_perkalian" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_1_b_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_2_b_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_2_3_b_perkalian" class="form-control" placeholder=""></div>                  
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_1_b_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_2_b_perkalian" class="form-control" placeholder=""></div>                  
+                      <div class="col-3 mt-3"><input type="text" name="3x3_3_3_b_perkalian" class="form-control" placeholder=""></div>                  
+                    </div>
+                  </div>
+                </div>                
+            </div>
+            
+
+            <div class="col-12 mt-4">
+              <div class="d-flex justify-content-end">
+                <button type="button" onclick="hitungMatriks()" style="width: 10rem;" class="btn btn-success btn-hitung rounded-0 text-uppercase fw-semibold">Hitung</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="tentang" class="d-none">
+      <div class="container mt-5 py-3 px-5 bg-light shadow-sm" style="line-height: 2rem;">
+        <h5 class="fw-bold">Tentang</h5>        
+        <div class="py-3" style="font-size: 1rem;">
+            Website Matrikzz dibuat untuk memenuhi tugas besar Aljabar Linear di Universitas Dian Nusantara.
+            <div class="table-responsive">
+              <table class="table-striped table">
+                <tr>
+                  <td>Nama</td>
+                  <td>:</td>
+                  <td>Mumtaz Azkia Hakim</td>
+                </tr>
+                <tr>
+                  <td>NIM</td>
+                  <td>:</td>
+                  <td>411221125</td>
+                </tr>
+                <tr>
+                  <td>Mata Kuliah</td>
+                  <td>:</td>
+                  <td>Aljabar Linear</td>
+                </tr>
+                <tr>
+                  <td>Prodi</td>
+                  <td>:</td>
+                  <td>Teknik Informatika (Cibubur)</td>
+                </tr>
+                <tr>
+                  <td>Dosen</td>
+                  <td>:</td>
+                  <td>Masnia, M.Pd</td>
+                </tr>
+              </table>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark mt-5 text-white">
+      <div class="container py-5">
+        <div class="row d-flex align-items-center">
+          <div class="col-12 col-lg-4 text-center">
+            <h3 class="mb-0">Matrikzz</h3>
+            <p class="mb-0">by Mumtaz Azkia</p>
+            <p class="mb-0">Aljabar Linear 2023</p>
+          </div>
+          <div class="col-12 col-lg-8 text-center">
+            <h5>Shortcut Menu</h5>
+            <ul style="list-style: none;">
+              <li><a onclick="showMenu('materi')" href="javascript:void[0]">Materi</a></li>
+              <li><a onclick="showMenu('kalku')" href="javascript:void[0]">Kalkulator</a></li>
+              <li><a onclick="showMenu('tentang')" href="javascript:void[0]">Tentang</a></li>
+            </ul>
+          </div>  
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function showMenu(params) {   
+          document.getElementById("materi").classList.add("d-none")
+          document.getElementById("kalku").classList.add("d-none")
+          document.getElementById("tentang").classList.add("d-none")
+          $(".hasil-matriks").html("")
+          $(".result").addClass("d-none")
+          if (params == "materi") {
+            materi.classList.remove("d-none")
+          }else if (params == "kalku") {
+            kalku.classList.remove("d-none")
+          }else{
+            tentang.classList.remove("d-none")
+          }
+        } 
+
+        $("#ordo").change(function(){
+          let operasi = $("#operasi").val()  
+          let ordo = $(this).val()  
+          for (let index = 1; index <= 8; index++) {
+            $(`#input-operasi-${index}`).removeClass('d-none')            
+            $(`#input-operasi-${index}`).addClass('d-none')            
+          } 
+          $(".hasil-matriks").html("")
+          $(".result").addClass("d-none")
+          if (ordo === "" || operasi === "") {
+            $(".alert-wrap").html('<div class="alert alert-danger">Jenis Operasi atau Ordo harus dipilih !</div>')
+            setTimeout(() => {
+              $(".alert-wrap").html("")
+            }, 1500);
+          }else{
+            if (operasi === "penjumlahan") {
+              if (ordo === "2") {
+                $(".penjumlahan_2x2").removeClass("d-none")
+              }else if (ordo === "3") {
+                $(".penjumlahan_3x3").removeClass("d-none")
+              }
+            }else if (operasi === "pengurangan") {
+              if (ordo === "2") {
+                $(".pengurangan_2x2").removeClass("d-none")
+              }else if (ordo === "3") {
+                $(".pengurangan_3x3").removeClass("d-none")
+              }
+            }else if (operasi === "skalar") {
+              if (ordo === "2") {
+                $(".skalar_2x2").removeClass("d-none")
+              }else if (ordo === "3") {
+                $(".skalar_3x3").removeClass("d-none")
+              }
+            }else if (operasi === "perkalian") {
+              if (ordo === "2") {
+                $(".perkalian_2x2").removeClass("d-none")
+              }else if (ordo === "3") {
+                $(".perkalian_3x3").removeClass("d-none")
+              }
+            }
+          }       
+        })
+        $("#operasi").change(function(){
+          let operasi = $(this).val()  
+          let ordo = $("#ordo").val()  
+          for (let index = 1; index <= 8; index++) {
+            $(`#input-operasi-${index}`).removeClass('d-none')            
+            $(`#input-operasi-${index}`).addClass('d-none')            
+          } 
+          $(".hasil-matriks").html("")
+          $(".result").addClass("d-none")
+          if(ordo != ""){
+            if (operasi === "penjumlahan") {
+              if (ordo === "2") {
+                $(".penjumlahan_2x2").removeClass("d-none")
+              }else if (ordo === "3") {
+                $(".penjumlahan_3x3").removeClass("d-none")
+              }
+            }else if (operasi === "pengurangan") {
+              if (ordo === "2") {
+                $(".pengurangan_2x2").removeClass("d-none")
+              }else if (ordo === "3") {
+                $(".pengurangan_3x3").removeClass("d-none")
+              }
+            }else if (operasi === "skalar") {
+              if (ordo === "2") {
+                $(".skalar_2x2").removeClass("d-none")
+              }else if (ordo === "3") {
+                $(".skalar_3x3").removeClass("d-none")
+              }
+            }else if (operasi === "perkalian") {
+              if (ordo === "2") {
+                $(".perkalian_2x2").removeClass("d-none")
+              }else if (ordo === "3") {
+                $(".perkalian_3x3").removeClass("d-none")
+              }
+            }
+          }     
+        })     
+        
+        function result2x2(m1x1,m1x2,m2x1,m2x2) {
+          $(".hasil-matriks").html(`
+              <div class="row d-flex justify-content-center">
+                  <div class="col-5">
+                    <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m1x1}</div>
+                  </div>                  
+                  <div class="col-5">
+                    <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m1x2}</div>
+                  </div>                  
+                </div>
+                <div class="row d-flex justify-content-center">
+                  <div class="col-5 mt-3">
+                    <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m2x1}</div>
+                  </div>                  
+                  <div class="col-5 mt-3">
+                    <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m2x2}</div>
+                  </div>                  
+                </div>
+            `)
+            $(".result").removeClass("d-none")
+        }
+
+        function result3x3(m1x1,m1x2,m1x3,m2x1,m2x2,m2x3,m3x1,m3x2,m3x3) {
+          $(".hasil-matriks").html(`
+                <div class="row d-flex justify-content-center">
+                    <div class="col-2 d-flex justify-content-center">
+                      <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m1x1}</div>
+                    </div>                  
+                    <div class="col-2 d-flex justify-content-center">
+                      <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m1x2}</div>
+                    </div>                  
+                    <div class="col-2 d-flex justify-content-center">
+                      <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m1x3}</div>
+                    </div>                  
+                  </div>                
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-2 mt-3 d-flex justify-content-center">
+                      <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m2x1}</div>
+                    </div>                  
+                    <div class="col-2 mt-3 d-flex justify-content-center">
+                      <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m2x2}</div>
+                    </div>                  
+                    <div class="col-2 mt-3 d-flex justify-content-center">
+                      <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m2x3}</div>
+                    </div>                  
+                  </div>                
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-2 mt-3 d-flex justify-content-center">
+                      <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m3x1}</div>
+                    </div>                  
+                    <div class="col-2 mt-3 d-flex justify-content-center">
+                      <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m3x2}</div>
+                    </div>                  
+                    <div class="col-2 mt-3 d-flex justify-content-center">
+                      <div class="px-2 py-1 text-center rounded" style="border: 1px solid #000000;">${m3x3}</div>
+                    </div>                  
+                  </div> 
+              `)
+              $(".result").removeClass("d-none")
+        }
+
+        function rumusNonPerkalian(ordo,jenis) {
+          $(".result").addClass("d-none")
+          let m1x1 = 0
+          let m1x2 = 0
+          let m1x3 = 0
+          let m2x1 = 0
+          let m2x2 = 0
+          let m2x3 = 0
+          let m3x1 = 0
+          let m3x2 = 0
+          let m3x3 = 0
+          let cek = true
+          if (ordo === "2") {
+            if (jenis === "penjumlahan") {
+              if ($("input[name='2x2_1_1_a_penjumlahan']").val() === "" || $("input[name='2x2_1_2_a_penjumlahan']").val() === "" || $("input[name='2x2_2_1_a_penjumlahan']").val() === "" || $("input[name='2x2_2_2_a_penjumlahan']").val() === "" || $("input[name='2x2_1_1_b_penjumlahan']").val() === "" || $("input[name='2x2_1_2_b_penjumlahan']").val() === "" || $("input[name='2x2_2_1_b_penjumlahan']").val() === "" || $("input[name='2x2_2_2_b_penjumlahan']").val() === "" ) {
+                $(".alert-wrap").html('<div class="alert alert-danger">Angka harus diisi !</div>')
+                setTimeout(() => {
+                  $(".alert-wrap").html("")
+                }, 1500);
+                cek = false;
+              }
+              m1x1 = parseInt($("input[name='2x2_1_1_a_penjumlahan']").val())+parseInt($("input[name='2x2_1_1_b_penjumlahan']").val())
+              m1x2 = parseInt($("input[name='2x2_1_2_a_penjumlahan']").val())+parseInt($("input[name='2x2_1_2_b_penjumlahan']").val())
+              m2x1 = parseInt($("input[name='2x2_2_1_a_penjumlahan']").val())+parseInt($("input[name='2x2_2_1_b_penjumlahan']").val())
+              m2x2 = parseInt($("input[name='2x2_2_2_a_penjumlahan']").val())+parseInt($("input[name='2x2_2_2_b_penjumlahan']").val())
+            }else if (jenis === "pengurangan") {
+              if ($("input[name='2x2_1_1_a_pengurangan']").val() === "" || $("input[name='2x2_1_2_a_pengurangan']").val() === "" || $("input[name='2x2_2_1_a_pengurangan']").val() === "" || $("input[name='2x2_2_2_a_pengurangan']").val() === "" || $("input[name='2x2_1_1_b_pengurangan']").val() === "" || $("input[name='2x2_1_2_b_pengurangan']").val() === "" || $("input[name='2x2_2_1_b_pengurangan']").val() === "" || $("input[name='2x2_2_2_b_pengurangan']").val() === "" ) {
+                $(".alert-wrap").html('<div class="alert alert-danger">Angka harus diisi !</div>')
+                setTimeout(() => {
+                  $(".alert-wrap").html("")
+                }, 1500);
+                cek = false;
+              }
+              m1x1 = parseInt($("input[name='2x2_1_1_a_pengurangan']").val())-parseInt($("input[name='2x2_1_1_b_pengurangan']").val())
+              m1x2 = parseInt($("input[name='2x2_1_2_a_pengurangan']").val())-parseInt($("input[name='2x2_1_2_b_pengurangan']").val())
+              m2x1 = parseInt($("input[name='2x2_2_1_a_pengurangan']").val())-parseInt($("input[name='2x2_2_1_b_pengurangan']").val())
+              m2x2 = parseInt($("input[name='2x2_2_2_a_pengurangan']").val())-parseInt($("input[name='2x2_2_2_b_pengurangan']").val())
+            }
+            result2x2(m1x1,m1x2,m2x1,m2x2)            
+          }else if (ordo === "3") {            
+            if (jenis === "penjumlahan") {
+              if ($("input[name='3x3_1_1_a_penjumlahan']").val() === "" || $("input[name='3x3_1_2_a_penjumlahan']").val() === "" || $("input[name='3x3_1_3_a_penjumlahan']").val() === "" || $("input[name='3x3_2_1_a_penjumlahan']").val() === "" || $("input[name='3x3_2_2_a_penjumlahan']").val() === "" || $("input[name='3x3_2_3_a_penjumlahan']").val() === "" || $("input[name='3x3_3_1_a_penjumlahan']").val() === "" || $("input[name='3x3_3_2_a_penjumlahan']").val() === "" || $("input[name='3x3_3_3_a_penjumlahan']").val() === "" || $("input[name='3x3_1_1_b_penjumlahan']").val() === "" || $("input[name='3x3_1_2_b_penjumlahan']").val() === "" || $("input[name='3x3_1_3_b_penjumlahan']").val() === "" || $("input[name='3x3_2_1_b_penjumlahan']").val() === "" || $("input[name='3x3_2_2_b_penjumlahan']").val() === "" || $("input[name='3x3_2_3_b_penjumlahan']").val() === "" || $("input[name='3x3_3_1_b_penjumlahan']").val() === "" || $("input[name='3x3_3_2_b_penjumlahan']").val() === "" || $("input[name='3x3_3_3_b_penjumlahan']").val() === "" ) {
+                $(".alert-wrap").html('<div class="alert alert-danger">Angka harus diisi !</div>')
+                setTimeout(() => {
+                  $(".alert-wrap").html("")
+                }, 1500);
+                cek = false;
+              }
+              m1x1 = parseInt($("input[name='3x3_1_1_a_penjumlahan']").val())+parseInt($("input[name='3x3_1_1_b_penjumlahan']").val())
+              m1x2 = parseInt($("input[name='3x3_1_2_a_penjumlahan']").val())+parseInt($("input[name='3x3_1_2_b_penjumlahan']").val())
+              m1x3 = parseInt($("input[name='3x3_1_3_a_penjumlahan']").val())+parseInt($("input[name='3x3_1_3_b_penjumlahan']").val())
+              m2x1 = parseInt($("input[name='3x3_2_1_a_penjumlahan']").val())+parseInt($("input[name='3x3_2_1_b_penjumlahan']").val())
+              m2x2 = parseInt($("input[name='3x3_2_2_a_penjumlahan']").val())+parseInt($("input[name='3x3_2_2_b_penjumlahan']").val())
+              m2x3 = parseInt($("input[name='3x3_2_3_a_penjumlahan']").val())+parseInt($("input[name='3x3_2_3_b_penjumlahan']").val())
+              m3x1 = parseInt($("input[name='3x3_3_1_a_penjumlahan']").val())+parseInt($("input[name='3x3_3_1_b_penjumlahan']").val())
+              m3x2 = parseInt($("input[name='3x3_3_2_a_penjumlahan']").val())+parseInt($("input[name='3x3_3_2_b_penjumlahan']").val())
+              m3x3 = parseInt($("input[name='3x3_3_3_a_penjumlahan']").val())+parseInt($("input[name='3x3_3_3_b_penjumlahan']").val())
+            }else if (jenis === "pengurangan") {
+              if ($("input[name='3x3_1_1_a_pengurangan']").val() === "" || $("input[name='3x3_1_2_a_pengurangan']").val() === "" || $("input[name='3x3_1_3_a_pengurangan']").val() === "" || $("input[name='3x3_2_1_a_pengurangan']").val() === "" || $("input[name='3x3_2_2_a_pengurangan']").val() === "" || $("input[name='3x3_2_3_a_pengurangan']").val() === "" || $("input[name='3x3_3_1_a_pengurangan']").val() === "" || $("input[name='3x3_3_2_a_pengurangan']").val() === "" || $("input[name='3x3_3_3_a_pengurangan']").val() === "" || $("input[name='3x3_1_1_b_pengurangan']").val() === "" || $("input[name='3x3_1_2_b_pengurangan']").val() === "" || $("input[name='3x3_1_3_b_pengurangan']").val() === "" || $("input[name='3x3_2_1_b_pengurangan']").val() === "" || $("input[name='3x3_2_2_b_pengurangan']").val() === "" || $("input[name='3x3_2_3_b_pengurangan']").val() === "" || $("input[name='3x3_3_1_b_pengurangan']").val() === "" || $("input[name='3x3_3_2_b_pengurangan']").val() === "" || $("input[name='3x3_3_3_b_pengurangan']").val() === "" ) {
+                $(".alert-wrap").html('<div class="alert alert-danger">Angka harus diisi !</div>')
+                setTimeout(() => {
+                  $(".alert-wrap").html("")
+                }, 1500);
+                cek = false;
+              }
+              m1x1 = parseInt($("input[name='3x3_1_1_a_pengurangan']").val())-parseInt($("input[name='3x3_1_1_b_pengurangan']").val())
+              m1x2 = parseInt($("input[name='3x3_1_2_a_pengurangan']").val())-parseInt($("input[name='3x3_1_2_b_pengurangan']").val())
+              m1x3 = parseInt($("input[name='3x3_1_3_a_pengurangan']").val())-parseInt($("input[name='3x3_1_3_b_pengurangan']").val())
+              m2x1 = parseInt($("input[name='3x3_2_1_a_pengurangan']").val())-parseInt($("input[name='3x3_2_1_b_pengurangan']").val())
+              m2x2 = parseInt($("input[name='3x3_2_2_a_pengurangan']").val())-parseInt($("input[name='3x3_2_2_b_pengurangan']").val())
+              m2x3 = parseInt($("input[name='3x3_2_3_a_pengurangan']").val())-parseInt($("input[name='3x3_2_3_b_pengurangan']").val())
+              m3x1 = parseInt($("input[name='3x3_3_1_a_pengurangan']").val())-parseInt($("input[name='3x3_3_1_b_pengurangan']").val())
+              m3x2 = parseInt($("input[name='3x3_3_2_a_pengurangan']").val())-parseInt($("input[name='3x3_3_2_b_pengurangan']").val())
+              m3x3 = parseInt($("input[name='3x3_3_3_a_pengurangan']").val())-parseInt($("input[name='3x3_3_3_b_pengurangan']").val())
+            }
+            if (cek) {
+              result3x3(m1x1,m1x2,m1x3,m2x1,m2x2,m2x3,m3x1,m3x2,m3x3)
+            }
+          }
+        }
+
+        function rumusSkalar(ordo) {
+          let m1x1 = 0
+          let m1x2 = 0
+          let m1x3 = 0
+          let m2x1 = 0
+          let m2x2 = 0
+          let m2x3 = 0
+          let m3x1 = 0
+          let m3x2 = 0
+          let m3x3 = 0
+          if (ordo === "2") {
+            if ($("input[name='2x2_skalar']").val() === "" || $("input[name='2x2_1_1_skalar']").val() === "" || $("input[name='2x2_1_2_skalar']").val() === "" || $("input[name='2x2_2_1_skalar']").val() === "" || $("input[name='2x2_2_2_skalar']").val() === "") {
+              $(".alert-wrap").html('<div class="alert alert-danger">Angka harus diisi !</div>')
+              setTimeout(() => {
+                $(".alert-wrap").html("")
+              }, 1500);
+            }else{
+              m1x1 = parseInt($("input[name='2x2_skalar']").val())*parseInt($("input[name='2x2_1_1_skalar']").val())            
+              m1x2 = parseInt($("input[name='2x2_skalar']").val())*parseInt($("input[name='2x2_1_2_skalar']").val())            
+              m2x1 = parseInt($("input[name='2x2_skalar']").val())*parseInt($("input[name='2x2_2_1_skalar']").val())            
+              m2x2 = parseInt($("input[name='2x2_skalar']").val())*parseInt($("input[name='2x2_2_2_skalar']").val())   
+              result2x2(m1x1,m1x2,m2x1,m2x2)                     
+            }
+          }else if(ordo === "3"){
+            if ($("input[name='3x3_skalar']").val() === "" || $("input[name='3x3_1_1_skalar']").val() === "" || $("input[name='3x3_1_2_skalar']").val() === "" || $("input[name='3x3_1_3_skalar']").val() === "" || $("input[name='3x3_2_1_skalar']").val() === "" || $("input[name='3x3_2_2_skalar']").val() === "" || $("input[name='3x3_2_3_skalar']").val() === "" || $("input[name='3x3_3_1_skalar']").val() === "" || $("input[name='3x3_3_2_skalar']").val() === "" || $("input[name='3x3_3_3_skalar']").val() === "") {
+              $(".alert-wrap").html('<div class="alert alert-danger">Angka harus diisi !</div>')
+              setTimeout(() => {
+                $(".alert-wrap").html("")
+              }, 1500);
+            }else{
+              m1x1 = parseInt($("input[name='3x3_skalar']").val())*parseInt($("input[name='3x3_1_1_skalar']").val())            
+              m1x2 = parseInt($("input[name='3x3_skalar']").val())*parseInt($("input[name='3x3_1_2_skalar']").val())            
+              m1x3 = parseInt($("input[name='3x3_skalar']").val())*parseInt($("input[name='3x3_1_3_skalar']").val())            
+              m2x1 = parseInt($("input[name='3x3_skalar']").val())*parseInt($("input[name='3x3_2_1_skalar']").val())            
+              m2x2 = parseInt($("input[name='3x3_skalar']").val())*parseInt($("input[name='3x3_2_2_skalar']").val())            
+              m2x3 = parseInt($("input[name='3x3_skalar']").val())*parseInt($("input[name='3x3_2_3_skalar']").val())            
+              m3x1 = parseInt($("input[name='3x3_skalar']").val())*parseInt($("input[name='3x3_3_1_skalar']").val())            
+              m3x2 = parseInt($("input[name='3x3_skalar']").val())*parseInt($("input[name='3x3_3_2_skalar']").val())            
+              m3x3 = parseInt($("input[name='3x3_skalar']").val())*parseInt($("input[name='3x3_3_3_skalar']").val())  
+              result3x3(m1x1,m1x2,m1x3,m2x1,m2x2,m2x3,m3x1,m3x2,m3x3)         
+            }
+          }
+        }
+
+
+        function rumusPerkalian(ordo) {
+          let m1x1 = 0
+          let m1x2 = 0
+          let m1x3 = 0
+          let m2x1 = 0
+          let m2x2 = 0
+          let m2x3 = 0
+          let m3x1 = 0
+          let m3x2 = 0
+          let m3x3 = 0
+          if (ordo === "2") {
+            if ($("input[name='2x2_1_1_a_perkalian']").val() === "" || $("input[name='2x2_1_2_a_perkalian']").val() === "" || $("input[name='2x2_2_1_a_perkalian']").val() === "" || $("input[name='2x2_2_2_a_perkalian']").val() === "" || $("input[name='2x2_1_1_b_perkalian']").val() === "" || $("input[name='2x2_1_2_b_perkalian']").val() === "" || $("input[name='2x2_2_1_b_perkalian']").val() === "" || $("input[name='2x2_2_2_b_perkalian']").val() === "" ) {
+                $(".alert-wrap").html('<div class="alert alert-danger">Angka harus diisi !</div>')
+                setTimeout(() => {
+                  $(".alert-wrap").html("")
+                }, 1500);
+            }else{
+              m1x1 = (parseInt($("input[name='2x2_1_1_a_perkalian']").val())*parseInt($("input[name='2x2_1_1_b_perkalian']").val()))+(parseInt($("input[name='2x2_1_2_a_perkalian']").val())*parseInt($("input[name='2x2_2_1_b_perkalian']").val()))            
+              m1x2 = (parseInt($("input[name='2x2_1_1_a_perkalian']").val())*parseInt($("input[name='2x2_1_2_b_perkalian']").val()))+(parseInt($("input[name='2x2_1_2_a_perkalian']").val())*parseInt($("input[name='2x2_2_2_b_perkalian']").val()))            
+              m2x1 = (parseInt($("input[name='2x2_2_1_a_perkalian']").val())*parseInt($("input[name='2x2_1_1_b_perkalian']").val()))+(parseInt($("input[name='2x2_2_2_a_perkalian']").val())*parseInt($("input[name='2x2_2_1_b_perkalian']").val()))
+              m2x2 = (parseInt($("input[name='2x2_2_1_a_perkalian']").val())*parseInt($("input[name='2x2_1_2_b_perkalian']").val()))+(parseInt($("input[name='2x2_2_2_a_perkalian']").val())*parseInt($("input[name='2x2_2_2_b_perkalian']").val()))
+              result2x2(m1x1,m1x2,m2x1,m2x2)            
+            }
+          }else if (ordo === "3") {
+            if ($("input[name='3x3_1_1_a_perkalian']").val() === "" || $("input[name='3x3_1_2_a_perkalian']").val() === "" || $("input[name='3x3_1_3_a_perkalian']").val() === "" || $("input[name='3x3_2_1_a_perkalian']").val() === "" || $("input[name='3x3_2_2_a_perkalian']").val() === "" || $("input[name='3x3_2_3_a_perkalian']").val() === "" || $("input[name='3x3_3_1_a_perkalian']").val() === "" || $("input[name='3x3_3_2_a_perkalian']").val() === "" || $("input[name='3x3_3_3_a_perkalian']").val() === "" || $("input[name='3x3_1_1_b_perkalian']").val() === "" || $("input[name='3x3_1_2_b_perkalian']").val() === "" || $("input[name='3x3_1_3_b_perkalian']").val() === "" || $("input[name='3x3_2_1_b_perkalian']").val() === "" || $("input[name='3x3_2_2_b_perkalian']").val() === "" || $("input[name='3x3_2_3_b_perkalian']").val() === "" || $("input[name='3x3_3_1_b_perkalian']").val() === "" || $("input[name='3x3_3_2_b_perkalian']").val() === "" || $("input[name='3x3_3_3_b_perkalian']").val() === "" ) {
+                $(".alert-wrap").html('<div class="alert alert-danger">Angka harus diisi !</div>')
+                setTimeout(() => {
+                  $(".alert-wrap").html("")
+                }, 1500);
+            }else{
+              m1x1 = (parseInt($("input[name='3x3_1_1_a_perkalian']").val())*parseInt($("input[name='3x3_1_1_b_perkalian']").val()))+(parseInt($("input[name='3x3_1_2_a_perkalian']").val())*parseInt($("input[name='3x3_2_1_b_perkalian']").val()))+(parseInt($("input[name='3x3_1_3_a_perkalian']").val())*parseInt($("input[name='3x3_3_1_b_perkalian']").val()))            
+              m1x2 = (parseInt($("input[name='3x3_1_1_a_perkalian']").val())*parseInt($("input[name='3x3_1_2_b_perkalian']").val()))+(parseInt($("input[name='3x3_1_2_a_perkalian']").val())*parseInt($("input[name='3x3_2_2_b_perkalian']").val()))+(parseInt($("input[name='3x3_1_3_a_perkalian']").val())*parseInt($("input[name='3x3_3_2_b_perkalian']").val()))            
+              m1x3 = (parseInt($("input[name='3x3_1_1_a_perkalian']").val())*parseInt($("input[name='3x3_1_3_b_perkalian']").val()))+(parseInt($("input[name='3x3_1_2_a_perkalian']").val())*parseInt($("input[name='3x3_2_3_b_perkalian']").val()))+(parseInt($("input[name='3x3_1_3_a_perkalian']").val())*parseInt($("input[name='3x3_3_3_b_perkalian']").val()))            
+              
+              m2x1 = (parseInt($("input[name='3x3_2_1_a_perkalian']").val())*parseInt($("input[name='3x3_1_1_b_perkalian']").val()))+(parseInt($("input[name='3x3_2_2_a_perkalian']").val())*parseInt($("input[name='3x3_2_1_b_perkalian']").val()))+(parseInt($("input[name='3x3_2_3_a_perkalian']").val())*parseInt($("input[name='3x3_3_1_b_perkalian']").val()))            
+              m2x2 = (parseInt($("input[name='3x3_2_1_a_perkalian']").val())*parseInt($("input[name='3x3_1_2_b_perkalian']").val()))+(parseInt($("input[name='3x3_2_2_a_perkalian']").val())*parseInt($("input[name='3x3_2_2_b_perkalian']").val()))+(parseInt($("input[name='3x3_2_3_a_perkalian']").val())*parseInt($("input[name='3x3_3_2_b_perkalian']").val()))            
+              m2x3 = (parseInt($("input[name='3x3_2_1_a_perkalian']").val())*parseInt($("input[name='3x3_1_3_b_perkalian']").val()))+(parseInt($("input[name='3x3_2_2_a_perkalian']").val())*parseInt($("input[name='3x3_2_3_b_perkalian']").val()))+(parseInt($("input[name='3x3_2_3_a_perkalian']").val())*parseInt($("input[name='3x3_3_3_b_perkalian']").val()))            
+              
+              m3x1 = (parseInt($("input[name='3x3_3_1_a_perkalian']").val())*parseInt($("input[name='3x3_1_1_b_perkalian']").val()))+(parseInt($("input[name='3x3_3_2_a_perkalian']").val())*parseInt($("input[name='3x3_2_1_b_perkalian']").val()))+(parseInt($("input[name='3x3_3_3_a_perkalian']").val())*parseInt($("input[name='3x3_3_1_b_perkalian']").val()))            
+              m3x2 = (parseInt($("input[name='3x3_3_1_a_perkalian']").val())*parseInt($("input[name='3x3_1_2_b_perkalian']").val()))+(parseInt($("input[name='3x3_3_2_a_perkalian']").val())*parseInt($("input[name='3x3_2_2_b_perkalian']").val()))+(parseInt($("input[name='3x3_3_3_a_perkalian']").val())*parseInt($("input[name='3x3_3_2_b_perkalian']").val()))            
+              m3x3 = (parseInt($("input[name='3x3_3_1_a_perkalian']").val())*parseInt($("input[name='3x3_1_3_b_perkalian']").val()))+(parseInt($("input[name='3x3_3_2_a_perkalian']").val())*parseInt($("input[name='3x3_2_3_b_perkalian']").val()))+(parseInt($("input[name='3x3_3_3_a_perkalian']").val())*parseInt($("input[name='3x3_3_3_b_perkalian']").val()))            
+              
+              result3x3(m1x1,m1x2,m1x3,m2x1,m2x2,m2x3,m3x1,m3x2,m3x3)                                  
+            }
+          }
+        }
+
+        function hitungMatriks() {
+          let operasi = document.getElementById("operasi").value
+          let ordo = document.getElementById("ordo").value
+          
+          if (ordo === "" || operasi === "") {
+            $(".alert-wrap").html('<div class="alert alert-danger">Jenis Operasi atau Ordo harus dipilih !</div>')
+            setTimeout(() => {
+              $(".alert-wrap").html("")
+            }, 1500);
+          }else{
+            if (operasi === "penjumlahan" || operasi == "pengurangan") {              
+              rumusNonPerkalian(ordo,operasi)
+            }else if(operasi === "skalar"){
+              rumusSkalar(ordo)
+            }else if(operasi === "perkalian"){
+              rumusPerkalian(ordo)
+            }
+          }
+
+        }
+        
+      </script>
+  </body>
+</html>
