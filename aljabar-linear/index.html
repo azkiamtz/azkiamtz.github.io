@@ -657,11 +657,12 @@
                   $(".alert-wrap").html("")
                 }, 1500);
                 cek = false;
+              }else{
+                m1x1 = parseInt($("input[name='2x2_1_1_a_penjumlahan']").val())+parseInt($("input[name='2x2_1_1_b_penjumlahan']").val())
+                m1x2 = parseInt($("input[name='2x2_1_2_a_penjumlahan']").val())+parseInt($("input[name='2x2_1_2_b_penjumlahan']").val())
+                m2x1 = parseInt($("input[name='2x2_2_1_a_penjumlahan']").val())+parseInt($("input[name='2x2_2_1_b_penjumlahan']").val())
+                m2x2 = parseInt($("input[name='2x2_2_2_a_penjumlahan']").val())+parseInt($("input[name='2x2_2_2_b_penjumlahan']").val())
               }
-              m1x1 = parseInt($("input[name='2x2_1_1_a_penjumlahan']").val())+parseInt($("input[name='2x2_1_1_b_penjumlahan']").val())
-              m1x2 = parseInt($("input[name='2x2_1_2_a_penjumlahan']").val())+parseInt($("input[name='2x2_1_2_b_penjumlahan']").val())
-              m2x1 = parseInt($("input[name='2x2_2_1_a_penjumlahan']").val())+parseInt($("input[name='2x2_2_1_b_penjumlahan']").val())
-              m2x2 = parseInt($("input[name='2x2_2_2_a_penjumlahan']").val())+parseInt($("input[name='2x2_2_2_b_penjumlahan']").val())
             }else if (jenis === "pengurangan") {
               if ($("input[name='2x2_1_1_a_pengurangan']").val() === "" || $("input[name='2x2_1_2_a_pengurangan']").val() === "" || $("input[name='2x2_2_1_a_pengurangan']").val() === "" || $("input[name='2x2_2_2_a_pengurangan']").val() === "" || $("input[name='2x2_1_1_b_pengurangan']").val() === "" || $("input[name='2x2_1_2_b_pengurangan']").val() === "" || $("input[name='2x2_2_1_b_pengurangan']").val() === "" || $("input[name='2x2_2_2_b_pengurangan']").val() === "" ) {
                 $(".alert-wrap").html('<div class="alert alert-danger">Angka harus diisi !</div>')
@@ -669,13 +670,16 @@
                   $(".alert-wrap").html("")
                 }, 1500);
                 cek = false;
+              }else{
+                m1x1 = parseInt($("input[name='2x2_1_1_a_pengurangan']").val())-parseInt($("input[name='2x2_1_1_b_pengurangan']").val())
+                m1x2 = parseInt($("input[name='2x2_1_2_a_pengurangan']").val())-parseInt($("input[name='2x2_1_2_b_pengurangan']").val())
+                m2x1 = parseInt($("input[name='2x2_2_1_a_pengurangan']").val())-parseInt($("input[name='2x2_2_1_b_pengurangan']").val())
+                m2x2 = parseInt($("input[name='2x2_2_2_a_pengurangan']").val())-parseInt($("input[name='2x2_2_2_b_pengurangan']").val())
               }
-              m1x1 = parseInt($("input[name='2x2_1_1_a_pengurangan']").val())-parseInt($("input[name='2x2_1_1_b_pengurangan']").val())
-              m1x2 = parseInt($("input[name='2x2_1_2_a_pengurangan']").val())-parseInt($("input[name='2x2_1_2_b_pengurangan']").val())
-              m2x1 = parseInt($("input[name='2x2_2_1_a_pengurangan']").val())-parseInt($("input[name='2x2_2_1_b_pengurangan']").val())
-              m2x2 = parseInt($("input[name='2x2_2_2_a_pengurangan']").val())-parseInt($("input[name='2x2_2_2_b_pengurangan']").val())
             }
-            result2x2(m1x1,m1x2,m2x1,m2x2)            
+            if (cek) {
+              result2x2(m1x1,m1x2,m2x1,m2x2)            
+            }
           }else if (ordo === "3") {            
             if (jenis === "penjumlahan") {
               if ($("input[name='3x3_1_1_a_penjumlahan']").val() === "" || $("input[name='3x3_1_2_a_penjumlahan']").val() === "" || $("input[name='3x3_1_3_a_penjumlahan']").val() === "" || $("input[name='3x3_2_1_a_penjumlahan']").val() === "" || $("input[name='3x3_2_2_a_penjumlahan']").val() === "" || $("input[name='3x3_2_3_a_penjumlahan']").val() === "" || $("input[name='3x3_3_1_a_penjumlahan']").val() === "" || $("input[name='3x3_3_2_a_penjumlahan']").val() === "" || $("input[name='3x3_3_3_a_penjumlahan']").val() === "" || $("input[name='3x3_1_1_b_penjumlahan']").val() === "" || $("input[name='3x3_1_2_b_penjumlahan']").val() === "" || $("input[name='3x3_1_3_b_penjumlahan']").val() === "" || $("input[name='3x3_2_1_b_penjumlahan']").val() === "" || $("input[name='3x3_2_2_b_penjumlahan']").val() === "" || $("input[name='3x3_2_3_b_penjumlahan']").val() === "" || $("input[name='3x3_3_1_b_penjumlahan']").val() === "" || $("input[name='3x3_3_2_b_penjumlahan']").val() === "" || $("input[name='3x3_3_3_b_penjumlahan']").val() === "" ) {
