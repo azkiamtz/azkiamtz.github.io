@@ -39,33 +39,28 @@ div.navbar-nav .nav-link:hover, .navbar-brand:hover, .social:hover{
 .navbar-brand{
     font-size: 1.4rem;
 }
-section#home, section#do{
+section#home,section#do,section#projects{
     width: 100%;
-    height: 100vh;
+    height: auto;
+    padding: 8rem 8rem;
 }
-section#skills,section#project{
+
+section#skills{
     width: 100%;
     height: 100%;
 }
-section#do svg{
-    position: absolute;
-    transform: translateY(-40%);
-    z-index: 1;
-}
-#home .container{
-    margin-top: 10rem;
-}
+
 h2.intro1{
     font-size: 2rem;    
 }
 h2.intro2{
-    font-size: 4.5rem;    
+    font-size: 2.5rem;    
     background: -webkit-linear-gradient(70deg, #ffffff, #5a5a5a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 p.intro3{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 span.fullstack{ 
@@ -73,12 +68,31 @@ span.fullstack{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-a.social{
-    color: #ffffff;
-    margin-right: 1.5rem;
-    font-size: 1.6rem;
 
+.btn-hire-me{
+    background: #ffffff;
+    color: #474787;
+    font-weight: 600;
+    margin-right: 8px;
+    border-color: #ffffff;
 }
+.btn-my-works{
+    background: #474787;
+    color: #ffffff;
+    font-weight: 600;
+    border-color: #ffffff;
+}
+.btn-hire-me:hover{
+    background: #474787;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+.btn-my-works:hover{
+    background: #ffffff;
+    color: #474787;
+    border-color: #474787;
+}
+
 div.ido{
     font-size: 9rem;
     background: #474787;
@@ -89,23 +103,6 @@ p.headline{
     font-size: 1rem;
 }
 
-div.card img{
-    width: 25rem;
-}
-div.card-skill{
-    width: 100%;
-    background: rgba( 217, 217, 217, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 2.5px );
-    -webkit-backdrop-filter: blur( 2.5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-div.card-skill img{
-    width: 8rem;
-    height: 8rem;
-    object-fit: contain;
-}
 ul.nav-pills li button.active,
 ul.nav-pills li button:hover{
     background: none !important;
@@ -129,9 +126,8 @@ div.my-service img{
 div.icon{
     background: #474787;
     color: #fff2ff;
-    width: fit-content;
-    font-size: 1.6rem;
-    border-radius: 3rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
     position: absolute;
     top: -1.5rem;
 }
@@ -148,18 +144,41 @@ p.detail{
     background: #474787;    
     opacity: 0;
 }
-@media (max-width: 767.98px) { 
-    section#do{
-        width: 100%;
-        height: 100%;
-    }      
-}
-@media (min-width: 768px) and (max-width: 1199px){ 
-    section#do{
-        width: 100%;
-        height: 100%;
-    }        
- }
 
+.card-projects img{
+    width: 100%;
+    height: 15.5rem;
+    object-fit: fill;
+}
+
+.card-projects .case{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    color: #ffffff;
+}
+.card-projects .case a{
+    position: absolute;
+    bottom: 0.9rem;
+    right: 1rem;
+    font-size: 1.2rem;
+}
+@media (max-width: 768px) { 
+    section#projects{        
+        padding: 3rem 1rem;
+    }
+}
+@media (max-width: 575.98px) { 
+    section#home,section#do{
+        padding: 3rem 1rem;
+    }
+    .card-projects img{
+        width: 100%;
+        height: 14rem;
+        object-fit: fill;
+    }
+}
 
 
